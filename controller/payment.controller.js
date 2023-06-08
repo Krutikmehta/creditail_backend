@@ -25,9 +25,10 @@ const paymentController = {
     const body = req.body;
     const { billNo, pendingAmount } = body;
 
-    if (!billNo || !pendingAmount) {
+    if (billNo === undefined || pendingAmount === undefined) {
       res.status(400);
       res.json({ message: "error" });
+      return;
     }
     const filter = { billNo: body.billNo };
     const update = { pendingAmount: body.pendingAmount };
