@@ -1,6 +1,6 @@
 # creditail_backend
 - Nodejs, MongoDB
-<blockquote>
+```json
 - invoice schema : {
     brand: {
       type: String,
@@ -40,7 +40,7 @@
       required: true,
     },
   }
-    </blockquote>
+   ```
  - Index on db : billNo
  - host - creditail-backend.vercel.app
  - endpoints
