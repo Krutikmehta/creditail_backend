@@ -36,6 +36,7 @@ const invoiceSchema = new mongoose.Schema(
     billNo: {
       type: String,
       required: true,
+      unique: true,
     },
     pendingAmount: {
       type: Number,
@@ -44,5 +45,8 @@ const invoiceSchema = new mongoose.Schema(
   },
   schemaOptions
 );
+
+// create index on billNo
+invoiceSchema.index({ billNo: 1 });
 
 mongoose.model("Invoice", invoiceSchema);
