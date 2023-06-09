@@ -1,6 +1,7 @@
 # creditail_backend
 - Nodejs, MongoDB
-- invoice schem : {
+<blockquote>
+- invoice schema : {
     brand: {
       type: String,
       required: true,
@@ -39,6 +40,7 @@
       required: true,
     },
   }
+    </blockquote>
  - Index on db : billNo
  - host - creditail-backend.vercel.app
  - endpoints
@@ -52,5 +54,5 @@
         - get all invoices  
     - POST - /api/v1/update_invoice 
         - update a invoice
-        - body : {billNo: String, pendingAmount: Number}
+        - body : { billNo: String, pendingAmount: Number }
  - 
